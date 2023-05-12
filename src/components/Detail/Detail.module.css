@@ -1,0 +1,25 @@
+.detail{
+    display: flex;
+    overflow: auto;
+    background-color: grey
+}
+
+.detailCont{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+
+}
+
+.imgDetail{
+    float: right;
+    border-radius: 2em;
+    margin-right: 1em;
+    margin-left:20em ;
+    height: 50%;
+    width: 50%;
+   
+}
+
+
+

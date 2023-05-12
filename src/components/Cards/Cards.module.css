@@ -1,0 +1,32 @@
+.contenedor{
+
+   background-image: url("./prueba2.jpg");
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   height: 100vh;
+   width: 100%;
+   background-repeat: no-repeat;
+}
+
+body{
+   background-image: url("./prueba2.jpg");
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   height: 100vh;
+   width: 100%;
+   background-repeat: no-repeat;
+
+}
+
+.cards{
+
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   flex-wrap: wrap;
+   height: 100vh;
+   width: 100%;
+   color: white;
+}

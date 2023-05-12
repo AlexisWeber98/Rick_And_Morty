@@ -1,0 +1,25 @@
+
+
+
+
+.error {
+    background-image: url("./peakpx.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 57em;
+    width: 100%;
+    margin: none; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h3{
+    margin-bottom: 20em;
+    
+}
+  
+  

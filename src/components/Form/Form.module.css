@@ -1,0 +1,68 @@
+body{
+    background-image: url("./formBack.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 67vh;
+    width: 100%;
+    
+    
+}
+
+.contain{
+   position: fixed;
+  top: .2em;
+  left: 8.5em;
+
+
+}
+
+.img{
+    background-image: url("./prueba1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 20em;
+    width: 20em;
+    border-radius: 40%;
+}
+
+.form{
+   padding: 1.2em;
+    display: flex;
+    border: solid;
+    border-radius: 1em;
+    background-color: grey;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20em;
+    position: sticky;
+    left: 36%;
+    margin-top: 18em;
+    
+}
+
+
+.errors{
+    justify-content: center;
+    text-align: center;
+    color: rgba(162, 20, 20, 0.882)
+}
+
+
+input{
+    padding: .5em;
+    border-radius: 1em;
+}
+
+.formButton {
+    padding: .5em;
+    border-radius: 1em;
+    transition: .5s;
+}
+
+.formButton:hover{
+    padding: 1em;
+    background-color: rgb(86, 238, 86);
+}
+
