@@ -58,7 +58,7 @@ input{
 .formButton {
     padding: .5em;
     border-radius: 1em;
-    transition: .5s;
+    transition: .2s;
 }
 
 .formButton:hover{

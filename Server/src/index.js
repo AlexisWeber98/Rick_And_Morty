@@ -1,15 +1,15 @@
 
 const http = require('http');
-const data = require("./utils/data")
+const characters = require("./utils/data")
 
 http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
 
-    if(request.url === "/rickandmorty/character"){
-        let idString = request.url.split( "/")[2]
+    if(request.url.includes("/rickandmorty/character")){
+        let idString = request.url.split( "/").at(-1)
         const urlId = Number(idString)
 
-        const character = data.find(obj => obj.id === urlId)
+        const character = characters.find((char) => char.id === urlId)
         response.writeHead(200,{"Content-type": "application/json"})
         response.end(JSON.stringify(character))
     
