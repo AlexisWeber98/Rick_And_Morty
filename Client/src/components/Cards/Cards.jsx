@@ -7,6 +7,7 @@ function Cards({characters, onClose}) {
 
 const personajesCards = characters.map(({id, name, status, species,gender, origin,image}) =>
 <Card 
+onClose={onClose}
 key = {id}
 id={id}
 name={name}
@@ -15,7 +16,7 @@ species={species}
 gender={gender}
 origin={origin}
 image={image}
-onClose={onClose}/>)
+/>)
 
 
 

@@ -1,0 +1,1 @@
+module.exports = [{email: 'Alexis.Weber@mailfence.com', password: "passw0rd"}];

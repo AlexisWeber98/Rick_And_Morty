@@ -8,10 +8,10 @@ const Detail = () => {
     
     const { id } = useParams();
     const [characters, setCharacters] = useState({});
-    const url= 'http://localhost:3001/rickandmorty/character/'
+    const url= 'http://localhost:3001/rickandmorty/character'
     
     useEffect(() => {
-        axios(`http://localhost:3001/rickandmorty/character/${id}`) 
+        axios(`${url}/${id}`) 
         .then(({data}) => {
             if (data.name) {
                 setCharacters(data);

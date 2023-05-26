@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 
 
 
+
 const Card = ({onClose, name, status, species, gender, origin, image, id, myFavorites, removeFav, addFav}) => {
    
    const [ isFav, setIsFav ] = useState(false);
