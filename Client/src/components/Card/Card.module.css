@@ -1,39 +1,36 @@
-
-
-.contenedor{
- 
+.contenedor {
     border: solid;
     border-radius: 2em;
-    margin: .1em;
+    margin: 0.1em;
     background-color: #c5ecc97e;
-    height: 20em;
-    transition: .2s;
+    height: 21.5em;
+    transition: 0.1s;
     text-decoration: none;
-   
-
-}
-
-.contenedor:hover{
-    padding: .6em;
-}
-
-.link{
+  }
+  
+  .contenedor:hover {
+    padding: 0.6em;
+  }
+  
+  .link {
     text-decoration: none;
-    margin: .1em;
+    margin: 0.1em;
     color: black;
-}
-
-
-.img{
-    border:15px;
+  }
+  
+  .img {
+    border: 15px;
     border-color: lightgreen;
-    border-style:groove;
+    border-style: groove;
     border-radius: 50%;
     height: 11em;
- 
-    
-}
-
+    transition: transform 0.5s;
+  }
+  
+  .img:hover {
+    transform: rotate(360deg);
+  }
+  
 
 
 .onClose{
@@ -47,6 +44,19 @@
     background-color: rgb(236, 102, 102);
     padding: .4em;
     
+}
+
+.addFav{
+    display:block;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: transparent;
+    border: none;
+}
+
+.addFav:hover{
+    cursor:pointer ;
 }
 
 

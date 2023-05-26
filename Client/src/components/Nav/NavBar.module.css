@@ -16,6 +16,7 @@
     margin-inline: 2em;
     border-radius: 2em;
     padding: 2.5em;
+    transition: 1s;
 
 
     color: white;
@@ -26,6 +27,10 @@
    
   text-emphasis-color: red;
     
+}
+
+.button :hover{
+padding: 4em;
 }
 
 

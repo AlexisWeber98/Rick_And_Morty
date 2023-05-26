@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import style from './Card.module.css'
 import { useState, useEffect } from 'react';
 import {connect} from 'react-redux'
+import red_heart from "./hearts/red_heart.png"
+import white_heart from "./hearts/white_heart.png"
 
 
 
@@ -38,7 +40,7 @@ const Card = ({onClose, name, status, species, gender, origin, image, id, myFavo
    return (
       
       <div className={style.contenedor}>
-         <button onClick={handleFavorite}> {isFav ? '❤️' :'🤍'} </button>
+         <button onClick={handleFavorite} className={style.addFav}> {isFav ? <img src={red_heart}/> : <img src={white_heart}/>} </button>
          <NavLink className={style.link} to={`/detail/${id}`}>
          <img className={style.img} src={image} alt={name} />
          <h2 >{name}</h2>
