@@ -1,5 +1,5 @@
 
-import  {ADD_FAV, REMOVE_FAV, FILTER, ORDER } from './actions-type'
+import  {ADD_FAV, REMOVE_FAV, FILTER, ORDER, RESET } from './actions-type'
 
 
 const initialState = {
@@ -40,14 +40,19 @@ switch (type) {
             return {
                 ...state,
                 myFavorites: payload === 'A'? allCharactersCopy.sort((a,b)=> a.id - b.id) : allCharactersCopy.sort ((a,b) => b.id - a.id)
-            }
+            };
 
 
+            case RESET:
+                return {
+                    
+                }
 
     default:
        return {
         ...state
     }
+
 };
  }
 

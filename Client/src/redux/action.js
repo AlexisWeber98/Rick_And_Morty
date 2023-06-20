@@ -1,4 +1,4 @@
- import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions-type";
+ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, RESET } from "./actions-type";
  import axios from "axios";
 
 
@@ -47,4 +47,12 @@ export const orderCards = (order) => {
         payload: order,
     }
 }
+
+export const resetFav = (reset) => {
+   return {
+      type: RESET
+   }
+}
+
+
 

@@ -1,5 +1,5 @@
 body{
-    background-image: url("./formBack.jpg");
+    background-image: url("./images/formBack.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,23 +11,22 @@ body{
 
 .contain{
    position: fixed;
-  top: .2em;
-  left: 8.5em;
-
-
+  top: .01em;
+  left: 15em;
+  height: 18em;
 }
 
 .img{
-    background-image: url("./prueba1.jpg");
+    background-image: url("./images/prueba1.jpg");
     background-size: cover;
     background-position: center;
-    height: 20em;
+    height: 19.8em;
     width: 20em;
     border-radius: 40%;
 }
 
 .form{
-   padding: 1.2em;
+   padding: .5em;
     display: flex;
     border: solid;
     border-radius: 1em;
@@ -62,7 +61,7 @@ input{
 }
 
 .formButton:hover{
-    padding: 1em;
+    padding: .8em;
     background-color: rgb(86, 238, 86);
 }
 

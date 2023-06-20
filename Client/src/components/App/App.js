@@ -11,6 +11,9 @@ import { useEffect, useState} from 'react';
 import axios from 'axios';
 
 
+import SignUp from '../Sigin Up/SignUp';
+
+
 
 function  App() {
    
@@ -22,27 +25,46 @@ function  App() {
    const PASSWORD = "passw0rd";
 
    
-   const url = `http://localhost:3001/rickandmorty/character`;
+
 
    const location = useLocation();
    
    const navigate = useNavigate();
 
+   const URL = 'http://localhost:3001/rickandmorty';
 
 
    //-------------------FUNCTIONS--------------------------------------------//
 
 
+
  const  login = async(userData) => {
       const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
+      
      try {
-      const {data} = await axios(URL + `?email=${email}&password=${password}`)
+      const {data} = await axios(`${URL}/login/?email=${email}&password=${password}`)
          const { access } = data;
          setAccess(acces);
          access && navigate('/home');
       } catch (error) {
          return error.message
+      }
+   };
+
+
+   const signup = async (userInfo) => {
+      const { name, email, password } = userInfo;
+
+      try {
+        await axios.post(`${URL}/login`,{
+         name,
+         email,
+         password
+        });
+
+
+      } catch (error) {
+         return error.message;
       }
    };
 
@@ -59,7 +81,7 @@ function  App() {
 
    const onSearch = async (id) => {
       try {
-        const {data}= await axios(`${url}/${id}`)
+        const {data}= await axios(`${URL}/character/${id}`)
          if (data.name){
             setCharacters((oldChars) => [...oldChars, data]);
          }
@@ -77,8 +99,10 @@ function  App() {
    return (
       <div className='App'>
 
-         {location.pathname !== '/' && (<Nav className='Nav' onSearch={onSearch} />)}
+         {location.pathname !== '/'  && location.pathname !== "/signup" &&<Nav className='Nav' onSearch={onSearch} />}
+
          <Routes>
+            <Route path="/signup" element={<SignUp signup={signup}/>}/>
             <Route path='/' element={<Form login={login}/>}/>
             <Route path='/home' element={ <Cards characters={characters} onClose={onClose}/>}/>
             <Route path='/about' element={<About/>}/>
