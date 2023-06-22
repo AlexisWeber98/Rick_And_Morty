@@ -17,11 +17,6 @@ router.delete('/fav/:id', deleteFav);
 router.get('/character/:id', getCharById);
 
 
-
-
-
-
-
 module.exports = router;
 
 

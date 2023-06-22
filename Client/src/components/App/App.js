@@ -21,8 +21,6 @@ function  App() {
 
    const [ acces, setAccess ] = useState(false);
 
-   const EMAIL = "Alexis.Weber@mailfence.com";
-   const PASSWORD = "passw0rd";
 
    
 

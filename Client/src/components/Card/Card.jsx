@@ -20,7 +20,7 @@ const Card = ({onClose, name, status, species, gender, origin, image, id, myFavo
       }
       else {
          setIsFav(true);
-         addFav({id,name,species, gender,image});
+         addFav({id,name,species,origin, status, gender,image});
       }
    }
 

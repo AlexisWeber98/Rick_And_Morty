@@ -6,10 +6,12 @@ module.exports = async (req, res) => {
     const { id, name, origin, status, image, species, gender } = req.body;
 
     try {
+
+        console.log(name,origin, status, image, species, gender)
         
-    if (!name || !origin || !status || !image || !species || !gender) return res.status(401).send({message: "Faltan Datos"});
+    if ( !name  ||!image || !species || !gender) return res.status(401).send({message: "Faltan Datos"});
     
-        await Favorite.findOrCreate({where:{
+       await Favorite.findOrCreate({where:{
             id,
             name,
             origin,
@@ -19,9 +21,11 @@ module.exports = async (req, res) => {
             gender}});
 
             const allFavorites = await Favorite.findAll();
-            return res.status(200).json(allFavorites);
+            return res.status(200).json(allFavorites); 
+
+           
         
     } catch (error) {
             return res.status(500).send(error.message)
-        }
-    }
+        } 
+    };

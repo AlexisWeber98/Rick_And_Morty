@@ -30,8 +30,8 @@ return(
             <h2> {characters.name && characters.name} </h2>
             <p>STATUS | {characters.status && characters.status }</p>
             <p>GENDER | {characters.gender && characters.gender }</p>
-            <p>ORIGIN | {characters.origin?.name}</p>
-            <p>LOCATION | {characters.location && characters.location.name}</p>
+            <p>ORIGIN | {characters.origin}</p>
+            <p>LOCATION | {characters.location?.name}</p>
         </div>
             <img className={style.imgDetail} src={characters.image} alt={characters.name} />
     </div>
