@@ -22,27 +22,28 @@ const Favorites = ({myFavorites, removeFav}) => {
 
 
     return(
-        <div>
-            <div className={style.container}>
+        <div className={style.container}>
+            <div className={style.menu}>
             <h4>Order By</h4>
-        <select onChange={handleOrder}>
-            <option value="A"> Ascendente</option>
-            <option value ="D">Descentente</option>
-        </select>
+            <select onChange={handleOrder}>
+                <option value="A"> Ascendente</option>
+                <option value ="D">Descentente</option>
+            </select>
+            
+            <select onChange={handleFilter}>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Genderless">Genderless</option>
+                <option value="unknown">unknown</option>
+                <option value="all" > Show All</option>
+            </select>
+            
+            </div>
 
-        <select onChange={handleFilter}>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Genderless">Genderless</option>
-            <option value="unknown">unknown</option>
-            <option value="all" > Show All</option>
-        </select>
 
-        </div>
-       
-
-        {myFavorites && myFavorites.map(({id, name, gender, status, image,onClose}) => {
-            return(
+            <div className={style.card}>
+            {myFavorites && myFavorites.map(({id, name, gender, status, image,onClose}) => {
+                return(
                 <Card
                 id={id}
                 key={id}
@@ -52,9 +53,12 @@ const Favorites = ({myFavorites, removeFav}) => {
                 status={status}
                 onClose={onClose}
                 />
-            )
-        })}
-        </div>
+            );
+            })}
+            
+            </div>
+        
+    </div>
         
     )
     

@@ -1,7 +1,14 @@
-.container{
+.menu{
     color: white;
    text-align: center;
     background-color: grey;
     margin: none;
     padding: .1em;
+}
+
+.card{
+    display: flex;
+    width: 20%;
+    height:.5rem;
+    border-radius: 3
 }
