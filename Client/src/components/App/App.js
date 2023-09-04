@@ -9,8 +9,6 @@ import Form from '../Form/Form';
 import Favorites from '../Favorites/Favorites';
 import { useEffect, useState} from 'react';
 import axios from 'axios';
-
-
 import SignUp from '../Sigin Up/SignUp';
 
 
@@ -19,7 +17,7 @@ function  App() {
    
    const [characters,setCharacters] = useState([]);
 
-   const [ acces, setAccess ] = useState(false);
+   const [ access, setAccess ] = useState(false);
 
 
    
@@ -30,6 +28,8 @@ function  App() {
    const navigate = useNavigate();
 
    const URL = 'http://localhost:3001/rickandmorty';
+
+  
 
 
    //-------------------FUNCTIONS--------------------------------------------//
@@ -42,8 +42,9 @@ function  App() {
      try {
       const {data} = await axios(`${URL}/login/?email=${email}&password=${password}`)
          const { access } = data;
-         setAccess(acces);
+         setAccess(access);
          access && navigate('/home');
+         localStorage.setItem("access", access)
       } catch (error) {
          return error.message
       }
@@ -66,10 +67,11 @@ function  App() {
       }
    };
 
-
+   const userAccess = localStorage.getItem("access")
    useEffect(() => {
-      !acces && navigate("/");
-   }, [acces]);
+      if(!userAccess){
+      !access && navigate("/")};
+   }, [access]);
 
 
    const onClose = (id) =>{
