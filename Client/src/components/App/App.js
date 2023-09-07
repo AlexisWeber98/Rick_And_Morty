@@ -9,7 +9,7 @@ import Form from '../Form/Form';
 import Favorites from '../Favorites/Favorites';
 import { useEffect, useState} from 'react';
 import axios from 'axios';
-import SignUp from '../Sigin Up/SignUp';
+import SignUp from '../SiginUp/SignUp';
 
 
 

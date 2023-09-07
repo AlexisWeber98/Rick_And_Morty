@@ -11,8 +11,9 @@ const validation = ({ userInfo, setErrors }) =>{
     else if (userInfo.password.length < 6 || userInfo.password.length > 10) tempError.password = "The password must have between 6 - 10 characters"
     else tempError.password = "";
 
-    if(userInfo.repeatPassword !== userInfo.password) tempError.repeatPassword = "The passwords do not match";
-    else tempError.repeatPassword= "";
+    if(userInfo.repeatPassword === userInfo.password) tempError.repeatPassword= "";
+    else {tempError.repeatPassword =  "The passwords do not match";
+}
 
 
     setErrors(tempError)
