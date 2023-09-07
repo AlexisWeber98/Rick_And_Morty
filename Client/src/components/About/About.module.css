@@ -44,4 +44,16 @@ h1 {
   .p {
     font-size: 2em;
   }
+
+}
+
+.tech{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+
+  .techSkills{
+    height: 6em;
+    display: flex;
+  }
 }
