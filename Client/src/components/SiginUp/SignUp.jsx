@@ -2,6 +2,7 @@ import { useState } from "react";
 import style from "../Form/Form.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import validation from "./validation";
+import Rick_and_Morty from "../Form/images/Rick_and_Morty.png"
 
 const SignUp = (props) => {
   const navigate = useNavigate();
@@ -42,7 +43,8 @@ const SignUp = (props) => {
   return (
     <div className={style.body}>
      
-      <div>
+      <div className={style.contain}>
+      <img className={style.superiorImage} src={Rick_and_Morty} alt="Rick And Morty" />
         <form className={style.form} onSubmit={handleSubmit}>
           <div className={style.img}></div>
 

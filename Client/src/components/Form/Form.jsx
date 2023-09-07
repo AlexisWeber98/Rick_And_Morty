@@ -39,9 +39,9 @@ const Form = (props) => {
 
 
 return(
-    <div >
-        <img className={style.contain} src={Rick_and_Morty} alt="Rick And Morty" />
-    <div>
+    <div className={style.body}>
+        <img className={style.superiorImage} src={Rick_and_Morty} alt="Rick And Morty" />
+    <div className={style.contain}>
         <form className={style.form} onSubmit={handleSubmit}>
           <div className={style.img}></div>
           
